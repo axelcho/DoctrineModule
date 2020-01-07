@@ -3,8 +3,8 @@
 namespace DoctrineModule\Form\Element;
 
 use DoctrineModule\Form\Element\Proxy;
-use Zend\Form\Element\Radio as RadioElement;
-use Zend\Form\Form;
+use Laminas\Form\Element\Radio as RadioElement;
+use Laminas\Form\Form;
 
 class ObjectRadio extends RadioElement
 {
@@ -26,7 +26,7 @@ class ObjectRadio extends RadioElement
 
     /**
      * @param  array|\Traversable $options
-     * @return self
+     * @return \Laminas\Form\Element\MultiCheckbox|\Laminas\Form\ElementInterface
      */
     public function setOptions($options)
     {
@@ -37,7 +37,7 @@ class ObjectRadio extends RadioElement
     /**
      * @param string $key
      * @param mixed $value
-     * @return self
+     * @return \Laminas\Form\Element
      */
     public function setOption($key, $value)
     {

@@ -3,9 +3,9 @@
 namespace DoctrineModule\Form\Element;
 
 use DoctrineModule\Form\Element\Proxy;
-use Zend\Form\Element\Select as SelectElement;
-use Zend\Form\Form;
-use Zend\Stdlib\ArrayUtils;
+use Laminas\Form\Element\Select as SelectElement;
+use Laminas\Form\Form;
+use Laminas\Stdlib\ArrayUtils;
 
 class ObjectSelect extends SelectElement
 {
@@ -27,7 +27,7 @@ class ObjectSelect extends SelectElement
 
     /**
      * @param  array|\Traversable $options
-     * @return self
+     * @return SelectElement|\Laminas\Form\ElementInterface
      */
     public function setOptions($options)
     {
@@ -38,7 +38,7 @@ class ObjectSelect extends SelectElement
     /**
      * @param string $key
      * @param mixed $value
-     * @return self
+     * @return \Laminas\Form\Element
      */
     public function setOption($key, $value)
     {
