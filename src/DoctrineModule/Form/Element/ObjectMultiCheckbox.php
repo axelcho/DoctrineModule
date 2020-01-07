@@ -3,9 +3,10 @@
 namespace DoctrineModule\Form\Element;
 
 use DoctrineModule\Form\Element\Proxy;
-use Zend\Form\Element\MultiCheckbox;
-use Zend\Form\Form;
-use Zend\Stdlib\ArrayUtils;
+use Laminas\Form\Element;
+use Laminas\Form\Element\MultiCheckbox;
+use Laminas\Form\Form;
+use Laminas\Stdlib\ArrayUtils;
 
 class ObjectMultiCheckbox extends MultiCheckbox
 {
@@ -25,9 +26,10 @@ class ObjectMultiCheckbox extends MultiCheckbox
         return $this->proxy;
     }
 
+
     /**
-     * @param  array|\Traversable $options
-     * @return self
+     * @param array|\Traversable $options
+     * @return MultiCheckbox|\Laminas\Form\ElementInterface
      */
     public function setOptions($options)
     {
@@ -38,7 +40,7 @@ class ObjectMultiCheckbox extends MultiCheckbox
     /**
      * @param string $key
      * @param mixed $value
-     * @return self
+     * @return Element
      */
     public function setOption($key, $value)
     {
